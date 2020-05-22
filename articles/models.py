@@ -6,6 +6,8 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateField(auto_now_add=True)
+    thumb = models.ImageField(default='default.png',blank=True)
+    
 
     #it defines how the model should be returned in shell
     def __str__(self):
