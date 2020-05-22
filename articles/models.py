@@ -10,3 +10,6 @@ class Article(models.Model):
     #it defines how the model should be returned in shell
     def __str__(self):
         return self.title
+    #to return only first 50 characters
+    def snippet(self):
+        return self.body[:50] + '...'
